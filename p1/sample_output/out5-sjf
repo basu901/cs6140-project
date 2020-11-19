@@ -1,0 +1,44 @@
+Process A [NEW] (arrival time 301 ms) 19 CPU bursts
+Process B [NEW] (arrival time 40 ms) 89 CPU bursts
+Process C [NEW] (arrival time 902 ms) 81 CPU bursts
+Process D [NEW] (arrival time 1656 ms) 74 CPU bursts
+Process E [NEW] (arrival time 947 ms) 33 CPU bursts
+Process F [NEW] (arrival time 240 ms) 87 CPU bursts
+Process G [NEW] (arrival time 2263 ms) 63 CPU bursts
+Process H [NEW] (arrival time 499 ms) 12 CPU bursts
+Process I [NEW] (arrival time 42 ms) 8 CPU bursts
+Process J [NEW] (arrival time 2754 ms) 33 CPU bursts
+Process K [NEW] (arrival time 492 ms) 9 CPU bursts
+Process L [NEW] (arrival time 1710 ms) 17 CPU bursts
+time 0ms: Simulator started for SJF [Q <empty>]
+time 40ms: Process B (tau 1000ms) arrived; added to ready queue [Q B]
+time 42ms: Process B started using the CPU for 505ms burst [Q <empty>]
+time 42ms: Process I (tau 1000ms) arrived; added to ready queue [Q I]
+time 240ms: Process F (tau 1000ms) arrived; added to ready queue [Q F I]
+time 301ms: Process A (tau 1000ms) arrived; added to ready queue [Q A F I]
+time 492ms: Process K (tau 1000ms) arrived; added to ready queue [Q A F I K]
+time 499ms: Process H (tau 1000ms) arrived; added to ready queue [Q A F H I K]
+time 547ms: Process B completed a CPU burst; 88 bursts to go [Q A F H I K]
+time 547ms: Recalculated tau = 753ms for process B [Q A F H I K]
+time 547ms: Process B switching out of CPU; will block on I/O until time 725ms [Q A F H I K]
+time 551ms: Process A started using the CPU for 159ms burst [Q F H I K]
+time 710ms: Process A completed a CPU burst; 18 bursts to go [Q F H I K]
+time 710ms: Recalculated tau = 580ms for process A [Q F H I K]
+time 710ms: Process A switching out of CPU; will block on I/O until time 1048ms [Q F H I K]
+time 714ms: Process F started using the CPU for 308ms burst [Q H I K]
+time 725ms: Process B (tau 753ms) completed I/O; added to ready queue [Q B H I K]
+time 902ms: Process C (tau 1000ms) arrived; added to ready queue [Q B C H I K]
+time 947ms: Process E (tau 1000ms) arrived; added to ready queue [Q B C E H I K]
+time 75871ms: Process I terminated [Q L G A D J K F H C B]
+time 91345ms: Process L terminated [Q A G J D K E F H C B]
+time 121498ms: Process A terminated [Q J K E F H G C B]
+time 125051ms: Process K terminated [Q F H G C B]
+time 176204ms: Process H terminated [Q G J F C B E]
+time 206765ms: Process J terminated [Q D F G C E B]
+time 279930ms: Process E terminated [Q C F D G B]
+time 335608ms: Process G terminated [Q F B D]
+time 345235ms: Process D terminated [Q C]
+time 419294ms: Process F terminated [Q C]
+time 421455ms: Process C terminated [Q B]
+time 480004ms: Process B terminated [Q <empty>]
+time 480006ms: Simulator ended for SJF [Q <empty>]
